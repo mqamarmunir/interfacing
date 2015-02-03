@@ -1,0 +1,2 @@
+D:\Muhammad Qamar\Interfacing_me\TestService\serviceinstaller\bin\Debug\serviceinstaller.msi
+D:\Muhammad Qamar\Interfacing_me\TestService\serviceinstaller\bin\Debug\serviceinstaller.wixpdb

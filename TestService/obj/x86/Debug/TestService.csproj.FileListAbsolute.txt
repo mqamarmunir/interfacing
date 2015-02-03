@@ -1,0 +1,26 @@
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\TestService.exe
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\TestService.pdb
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.ProjectInstaller.resources
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.Service1.resources
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.csproj.GenerateResource.Cache
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.exe
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.pdb
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\TestService.exe.config
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\BusinessLayer.dll
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\DataLayer.dll
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\BusinessLayer.pdb
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\bin\Debug\DataLayer.pdb
+c:\users\murtaza mani\documents\visual studio 2010\Projects\TestService\TestService\obj\x86\Debug\TestService.csprojResolveAssemblyReference.cache
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\TestService.exe.config
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.exe
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\TestService.exe
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\TestService.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\BusinessLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\DataLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\BusinessLayer.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Debug\DataLayer.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.csprojResolveAssemblyReference.cache
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.ProjectInstaller.resources
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.Service1.resources
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.csproj.GenerateResource.Cache

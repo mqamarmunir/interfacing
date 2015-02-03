@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
+  
+  <Product Name="Trees interfacing"
+           Id="*"
+           UpgradeCode="{11EB5FEC-AE4B-45ED-B23D-DA4EE038CF29}"
+           Manufacturer="Trees"
+           Version="1.1.000"
+           Language="1033">
+    
+    <Package InstallerVersion="200"
+             Compressed="yes" />
+    <Media Id="1"
+           Cabinet="media1.cab"
+           EmbedCab="yes" />
+    <Directory Id="TARGETDIR"
+               Name="SourceDir">
+      <Directory Id="INSTALLDIR"
+                 Name="PFiles">
+        <Directory Id="Trees"
+                   Name="Trees">
+          <Directory Id="interfacing"
+                     Name="interfacing">
+            <Component Id="Trees.interfacing"
+                       Guid="{BF4229B8-58DF-46A7-91E4-80D08ABD78FA}">
+              <File Id="TestService.exe"
+                    Name="TestService.exe"
+                    Source="..\TestService\bin\Debug\TestService.exe"
+                    Vital="yes"
+                    KeyPath="yes"
+                    DiskId="1" />
+              <File Id="TestService.exe.config"
+                    Name="TestService.exe.config"
+                    Source="..\TestService\bin\Debug\TestService.exe.config"
+                    Vital="yes"
+                    KeyPath="no"
+                    DiskId="1" />
+              <File Id="BusinessLayer.dll"
+                    Name="BusinessLayer.dll"
+                    Source="..\TestService\bin\Debug\BusinessLayer.dll"
+                    Vital="yes"
+                    KeyPath="no"
+                    DiskId="1" />
+              <File Id="DataLayer.dll"
+                    Name="DataLayer.dll"
+                    Source="..\TestService\bin\Debug\DataLayer.dll"
+                    Vital="yes"
+                    KeyPath="no"
+                    DiskId="1" />
+              <ServiceInstall Id="ServiceInstaller"
+                              Type="ownProcess"
+                              Vital="yes"
+                              Name="Trees:Interfacing"
+                              DisplayName="Trees:Interfacing"
+                              Description="Analyzer Interfacing"
+                              Start="auto"
+                              Account="LocalSystem"
+                              ErrorControl="ignore"
+                              Interactive="no" />
+              <ServiceControl Id="StartService"
+                              Start="install"
+                              Stop="both"
+                              Remove="uninstall"
+                              Name="Trees:interfacing"
+                              Wait="yes" />
+            </Component>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+    <Feature Id="ProductFeature"
+             Title="Trees:Interfacing"
+             Level="1">
+      <ComponentRef Id="Trees.interfacing" />
+    </Feature>
+    <PropertyRef Id="NETFRAMEWORK40CLIENT" />
+    <Condition Message=".Net Framework v4.000 is required to procedd further. Please install .Net 4 and then start this installer">
+      <![CDATA[Installed OR NETFRAMEWORK40CLIENT]]>
+    </Condition>
+  </Product>
+</Wix>

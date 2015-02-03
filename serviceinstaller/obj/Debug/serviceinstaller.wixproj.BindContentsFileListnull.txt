@@ -1,0 +1,4 @@
+..\TestService\bin\Debug\BusinessLayer.dll
+..\TestService\bin\Debug\DataLayer.dll
+..\TestService\bin\Debug\TestService.exe
+..\TestService\bin\Debug\TestService.exe.config

@@ -1,0 +1,6 @@
+obj\Debug\Product.wixobj
+D:\Muhammad Qamar\Interfacing_me\TestService\serviceinstaller\bin\Debug\serviceinstaller.msi
+D:\Muhammad Qamar\Interfacing_me\TestService\serviceinstaller\bin\Debug\serviceinstaller.wixpdb
+obj\Debug\serviceinstaller.wixproj.BindContentsFileListnull.txt
+obj\Debug\serviceinstaller.wixproj.BindOutputsFileListnull.txt
+obj\Debug\serviceinstaller.wixproj.BindBuiltOutputsFileListnull.txt

@@ -1,0 +1,3 @@
+D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\bin\Release\DataLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\obj\Release\DataLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\bin\Release\MySql.Data.dll

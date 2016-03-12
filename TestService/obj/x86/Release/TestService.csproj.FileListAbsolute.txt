@@ -1,0 +1,17 @@
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\TestService.exe.config
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\TestService.exe
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\TestService.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\BusinessLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\DataLayer.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\BusinessLayer.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\DataLayer.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.ProjectInstaller.resources
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.Service1.resources
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.csproj.GenerateResource.Cache
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.exe
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.pdb
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\bin\Release\MySql.Data.dll
+D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestService.csprojResolveAssemblyReference.cache
+D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\bin\Release\TestService.exe.config
+D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\obj\x86\Release\TestService.exe
+D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\obj\x86\Release\TestService.pdb

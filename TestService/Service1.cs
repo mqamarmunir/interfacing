@@ -10,6 +10,7 @@ using System.Timers;
 using System.Configuration;
 using MySql.Data.MySqlClient;
 using BusinessLayer;
+using System.Data.OleDb;
 
 namespace TestService
 {
@@ -72,7 +73,7 @@ namespace TestService
                         ///then parse the record and Clear the string Builder for next 
                         ///Record.
                         // eventLog1.WriteEntry(sb.ToString());
-                        eventLog1.WriteEntry(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim());
+                       // eventLog1.WriteEntry(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim());
                         Parsethisandinsert(sb_port1.ToString(), Convert.ToInt32(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim()));
                         sb_port1.Clear();
 
@@ -136,9 +137,9 @@ namespace TestService
                                 {
                                     patid = patinfo[4].ToString();
                                 }
-                                catch (IndexOutOfRangeException ee)
+                                catch (Exception ee)
                                 {
-                                    eventLog1.WriteEntry("Outof Range Exception on Patientid: " + ee.ToString());
+                                    eventLog1.WriteEntry("Exception on getting Patientid: " + ee.ToString());
                                 }
                             }
                             else if (def[j].Contains("O|") && def[j].Contains("R|") && def[j].IndexOf("O|") < def[j].IndexOf("R|"))
@@ -146,6 +147,11 @@ namespace TestService
                                 ///Get lab ID
                                 string[] order = def[j].Split(sep3);
                                 labid = order[2].ToString();
+                                if (labid.Contains("^"))
+                                {
+                                    string[] splitlabid = labid.Split(sep4);
+                                    labid = splitlabid[1].ToString().Trim();
+                                }
                             }
                             else if (def[j].Contains("R|"))
                             {
@@ -161,6 +167,10 @@ namespace TestService
                                 else
                                 {
                                     attribcode = attcode[4].ToString();
+                                }
+                                if (attribcode.Contains(@"/"))
+                                {
+                                    attribcode = attribcode.Replace(@"/", "");
                                 }
                                 if (attribcode.ToLower() == "wbc" || attribcode.ToLower() == "plt")
                                 {
@@ -180,7 +190,7 @@ namespace TestService
 
 
                                 }
-                                else if (attribcode.ToLower().Equals("900") || attribcode.ToLower().Equals("999"))
+                                else if (attribcode.ToLower().Equals("900") || attribcode.ToLower().Equals("999") || attribcode.ToLower().Equals("102"))
                                 {
                                     if (attribresult.Contains("-1^"))
                                     {

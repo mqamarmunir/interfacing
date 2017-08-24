@@ -136,3 +136,7 @@ D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\bin\Debug\Dat
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\obj\Debug\DataLayer.dll
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\obj\Debug\DataLayer.pdb
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\obj\Debug\DataLayer.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\obj\Debug\DataLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\obj\Debug\DataLayer.pdb
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\bin\Debug\DataLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\bin\Debug\DataLayer.pdb

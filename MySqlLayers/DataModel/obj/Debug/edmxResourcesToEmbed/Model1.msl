@@ -1,0 +1,240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="miModelStoreContainer" CdmEntityContainer="miEntities">
+    <EntitySetMapping Name="mi_setting">
+      <EntityTypeMapping TypeName="miModel.mi_setting">
+        <MappingFragment StoreEntitySet="mi_setting">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Parameter1" ColumnName="Parameter1" />
+          <ScalarProperty Name="Parameter2" ColumnName="Parameter2" />
+          <ScalarProperty Name="Parameter3" ColumnName="Parameter3" />
+          <ScalarProperty Name="Parameter4" ColumnName="Parameter4" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_taudit">
+      <EntityTypeMapping TypeName="miModel.mi_taudit">
+        <MappingFragment StoreEntitySet="mi_taudit">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="senton" ColumnName="senton" />
+          <ScalarProperty Name="sentto" ColumnName="sentto" />
+          <ScalarProperty Name="filename" ColumnName="filename" />
+          <ScalarProperty Name="status" ColumnName="status" />
+          <ScalarProperty Name="maxresultid" ColumnName="maxresultid" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tbooking">
+      <EntityTypeMapping TypeName="miModel.mi_tbooking">
+        <MappingFragment StoreEntitySet="mi_tbooking">
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="LabID" ColumnName="LabID" />
+          <ScalarProperty Name="PatientID" ColumnName="PatientID" />
+          <ScalarProperty Name="Patient_name" ColumnName="Patient_name" />
+          <ScalarProperty Name="Test_Code" ColumnName="Test_Code" />
+          <ScalarProperty Name="Machine_TestID" ColumnName="Machine_TestID" />
+          <ScalarProperty Name="Test_Name" ColumnName="Test_Name" />
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+          <ScalarProperty Name="Machine_Time" ColumnName="Machine_Time" />
+          <ScalarProperty Name="SeqID" ColumnName="SeqID" />
+          <ScalarProperty Name="BatchNo" ColumnName="BatchNo" />
+          <ScalarProperty Name="Sample_Type" ColumnName="Sample_Type" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="SendOn" ColumnName="SendOn" />
+          <ScalarProperty Name="ReceivedOn" ColumnName="ReceivedOn" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tinstruments">
+      <EntityTypeMapping TypeName="miModel.mi_tinstruments">
+        <MappingFragment StoreEntitySet="mi_tinstruments">
+          <ScalarProperty Name="InstrumentID" ColumnName="InstrumentID" />
+          <ScalarProperty Name="Supplierid" ColumnName="Supplierid" />
+          <ScalarProperty Name="Instrument_Name" ColumnName="Instrument_Name" />
+          <ScalarProperty Name="Model" ColumnName="Model" />
+          <ScalarProperty Name="I_Release" ColumnName="I_Release" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Manual" ColumnName="Manual" />
+          <ScalarProperty Name="Patient_no_format" ColumnName="Patient_no_format" />
+          <ScalarProperty Name="BarCode_Standard" ColumnName="BarCode_Standard" />
+          <ScalarProperty Name="Bidirectional" ColumnName="Bidirectional" />
+          <ScalarProperty Name="Communication_Stnadard" ColumnName="Communication_Stnadard" />
+          <ScalarProperty Name="Communication_method" ColumnName="Communication_method" />
+          <ScalarProperty Name="PORT" ColumnName="PORT" />
+          <ScalarProperty Name="BaudRate" ColumnName="BaudRate" />
+          <ScalarProperty Name="Parity" ColumnName="Parity" />
+          <ScalarProperty Name="Stopbit" ColumnName="Stopbit" />
+          <ScalarProperty Name="DataBit" ColumnName="DataBit" />
+          <ScalarProperty Name="FlowControl" ColumnName="FlowControl" />
+          <ScalarProperty Name="Acknowledgement_code" ColumnName="Acknowledgement_code" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tpersonnel">
+      <EntityTypeMapping TypeName="miModel.mi_tpersonnel">
+        <MappingFragment StoreEntitySet="mi_tpersonnel">
+          <ScalarProperty Name="PersonId" ColumnName="PersonId" />
+          <ScalarProperty Name="OrgId" ColumnName="OrgId" />
+          <ScalarProperty Name="DepartmentId" ColumnName="DepartmentId" />
+          <ScalarProperty Name="SubdepartmentId" ColumnName="SubdepartmentId" />
+          <ScalarProperty Name="DesignationId" ColumnName="DesignationId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="ServiceNo" ColumnName="ServiceNo" />
+          <ScalarProperty Name="Salutation" ColumnName="Salutation" />
+          <ScalarProperty Name="FName" ColumnName="FName" />
+          <ScalarProperty Name="MName" ColumnName="MName" />
+          <ScalarProperty Name="LName" ColumnName="LName" />
+          <ScalarProperty Name="Acronym" ColumnName="Acronym" />
+          <ScalarProperty Name="FHName" ColumnName="FHName" />
+          <ScalarProperty Name="Sex" ColumnName="Sex" />
+          <ScalarProperty Name="DOB" ColumnName="DOB" />
+          <ScalarProperty Name="BloodGroup" ColumnName="BloodGroup" />
+          <ScalarProperty Name="MS" ColumnName="MS" />
+          <ScalarProperty Name="NIC" ColumnName="NIC" />
+          <ScalarProperty Name="NICValidUpto" ColumnName="NICValidUpto" />
+          <ScalarProperty Name="Passport" ColumnName="Passport" />
+          <ScalarProperty Name="PassportValidUpto" ColumnName="PassportValidUpto" />
+          <ScalarProperty Name="HPhoneNo1" ColumnName="HPhoneNo1" />
+          <ScalarProperty Name="HPhoneNo2" ColumnName="HPhoneNo2" />
+          <ScalarProperty Name="OPhoneNo1" ColumnName="OPhoneNo1" />
+          <ScalarProperty Name="OPhoneNo2" ColumnName="OPhoneNo2" />
+          <ScalarProperty Name="CPhoneNo" ColumnName="CPhoneNo" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CurrentAddress" ColumnName="CurrentAddress" />
+          <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+          <ScalarProperty Name="PictureRef" ColumnName="PictureRef" />
+          <ScalarProperty Name="LoginId" ColumnName="LoginId" />
+          <ScalarProperty Name="Pasword" ColumnName="Pasword" />
+          <ScalarProperty Name="JoiningDate" ColumnName="JoiningDate" />
+          <ScalarProperty Name="LeavingDate" ColumnName="LeavingDate" />
+          <ScalarProperty Name="Education" ColumnName="Education" />
+          <ScalarProperty Name="Nature" ColumnName="Nature" />
+          <ScalarProperty Name="ContractExpiry" ColumnName="ContractExpiry" />
+          <ScalarProperty Name="ReferenceCode" ColumnName="ReferenceCode" />
+          <ScalarProperty Name="Salary" ColumnName="Salary" />
+          <ScalarProperty Name="FaxNo" ColumnName="FaxNo" />
+          <ScalarProperty Name="Enteredby" ColumnName="Enteredby" />
+          <ScalarProperty Name="Enteredon" ColumnName="Enteredon" />
+          <ScalarProperty Name="clientid" ColumnName="clientid" />
+          <ScalarProperty Name="crossdept" ColumnName="crossdept" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tpreferencesetting">
+      <EntityTypeMapping TypeName="miModel.mi_tpreferencesetting">
+        <MappingFragment StoreEntitySet="mi_tpreferencesetting">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="serveraddress" ColumnName="serveraddress" />
+          <ScalarProperty Name="archivalfolderpath" ColumnName="archivalfolderpath" />
+          <ScalarProperty Name="serverfolderpath" ColumnName="serverfolderpath" />
+          <ScalarProperty Name="serveruser" ColumnName="serveruser" />
+          <ScalarProperty Name="serverpassword" ColumnName="serverpassword" />
+          <ScalarProperty Name="transfer_method" ColumnName="transfer_method" />
+          <ScalarProperty Name="status" ColumnName="status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tresult">
+      <EntityTypeMapping TypeName="miModel.mi_tresult">
+        <MappingFragment StoreEntitySet="mi_tresult">
+          <ScalarProperty Name="ResultID" ColumnName="ResultID" />
+          <ScalarProperty Name="BookingID" ColumnName="BookingID" />
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+          <ScalarProperty Name="Result" ColumnName="Result" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="machinename" ColumnName="machinename" />
+          <ScalarProperty Name="senton" ColumnName="senton" />
+          <ScalarProperty Name="sentto" ColumnName="sentto" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_tsuppliers">
+      <EntityTypeMapping TypeName="miModel.mi_tsuppliers">
+        <MappingFragment StoreEntitySet="mi_tsuppliers">
+          <ScalarProperty Name="SupplierID" ColumnName="SupplierID" />
+          <ScalarProperty Name="Supplier_Name" ColumnName="Supplier_Name" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="Phone_1" ColumnName="Phone_1" />
+          <ScalarProperty Name="Phone_2" ColumnName="Phone_2" />
+          <ScalarProperty Name="Fax_1" ColumnName="Fax_1" />
+          <ScalarProperty Name="Fax_2" ColumnName="Fax_2" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="CellNo" ColumnName="CellNo" />
+          <ScalarProperty Name="WebAddress" ColumnName="WebAddress" />
+          <ScalarProperty Name="Linkedin_ID" ColumnName="Linkedin_ID" />
+          <ScalarProperty Name="CP_Name" ColumnName="CP_Name" />
+          <ScalarProperty Name="CP_Designation" ColumnName="CP_Designation" />
+          <ScalarProperty Name="CP_Office_Phone" ColumnName="CP_Office_Phone" />
+          <ScalarProperty Name="CP_Cell_no" ColumnName="CP_Cell_no" />
+          <ScalarProperty Name="CP_Email" ColumnName="CP_Email" />
+          <ScalarProperty Name="City" ColumnName="City" />
+          <ScalarProperty Name="Country" ColumnName="Country" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="Clientid" ColumnName="Clientid" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="Ref_SupplierID" ColumnName="Ref_SupplierID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_ttestattribute">
+      <EntityTypeMapping TypeName="miModel.mi_ttestattribute">
+        <MappingFragment StoreEntitySet="mi_ttestattribute">
+          <ScalarProperty Name="AttributeID" ColumnName="AttributeID" />
+          <ScalarProperty Name="Machine_testid" ColumnName="Machine_testid" />
+          <ScalarProperty Name="LIMSAttributeID" ColumnName="LIMSAttributeID" />
+          <ScalarProperty Name="LIMSAttributeName" ColumnName="LIMSAttributeName" />
+          <ScalarProperty Name="MachineAttributeName" ColumnName="MachineAttributeName" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="MachineAttributeCode" ColumnName="MachineAttributeCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="mi_ttests">
+      <EntityTypeMapping TypeName="miModel.mi_ttests">
+        <MappingFragment StoreEntitySet="mi_ttests">
+          <ScalarProperty Name="Machine_testid" ColumnName="Machine_testid" />
+          <ScalarProperty Name="Lims_testid" ColumnName="Lims_testid" />
+          <ScalarProperty Name="Lims_test_name" ColumnName="Lims_test_name" />
+          <ScalarProperty Name="Machine_Test_name" ColumnName="Machine_Test_name" />
+          <ScalarProperty Name="LOINC_code" ColumnName="LOINC_code" />
+          <ScalarProperty Name="Instrumentid" ColumnName="Instrumentid" />
+          <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+          <ScalarProperty Name="EnteredOn" ColumnName="EnteredOn" />
+          <ScalarProperty Name="ClientID" ColumnName="ClientID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="DeptID" ColumnName="DeptID" />
+          <ScalarProperty Name="MachineTestCode" ColumnName="MachineTestCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="cliqmachinemappings">
+      <EntityTypeMapping TypeName="miModel.cliqmachinemapping">
+        <MappingFragment StoreEntitySet="cliqmachinemappings">
+          <ScalarProperty Name="MachineID" ColumnName="MachineID" />
+          <ScalarProperty Name="Active" ColumnName="Active" />
+          <ScalarProperty Name="MachineAttributeCode" ColumnName="MachineAttributeCode" />
+          <ScalarProperty Name="AttributeName" ColumnName="AttributeName" />
+          <ScalarProperty Name="CliqAttributeID" ColumnName="CliqAttributeID" />
+          <ScalarProperty Name="TestName" ColumnName="TestName" />
+          <ScalarProperty Name="Test_ID" ColumnName="Test_ID" />
+          <ScalarProperty Name="BranchID" ColumnName="BranchID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

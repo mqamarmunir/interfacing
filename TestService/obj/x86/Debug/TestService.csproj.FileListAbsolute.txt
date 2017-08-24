@@ -24,3 +24,20 @@ D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestServi
 D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.ProjectInstaller.resources
 D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.Service1.resources
 D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Debug\TestService.csproj.GenerateResource.Cache
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\TestService.exe.config
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.exe
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.pdb
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.ProjectInstaller.resources
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.Service1.resources
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Debug\TestService.csproj.GenerateResource.Cache
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\TestService.exe
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\TestService.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\BusinessLayer.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\DataModel.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\DataLayer.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\EntityFramework.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\BusinessLayer.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\DataModel.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\DataLayer.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Debug\EntityFramework.xml

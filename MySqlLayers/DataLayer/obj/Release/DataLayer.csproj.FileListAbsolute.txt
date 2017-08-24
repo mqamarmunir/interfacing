@@ -1,3 +1,6 @@
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\bin\Release\DataLayer.dll
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\obj\Release\DataLayer.dll
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\DataLayer\bin\Release\MySql.Data.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\bin\Release\DataLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\obj\Release\DataLayer.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataLayer\obj\Release\DataLayer.dll

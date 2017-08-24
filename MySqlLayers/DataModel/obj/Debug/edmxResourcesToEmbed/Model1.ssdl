@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="miModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="cliqmachinemappings">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BranchID" Type="uint" Nullable="false" />
+    <Property Name="Test_ID" Type="uint" Nullable="false" />
+    <Property Name="TestName" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="CliqAttributeID" Type="uint" Nullable="false" />
+    <Property Name="AttributeName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="MachineAttributeCode" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="Active" Type="bool" Nullable="false" />
+    <Property Name="MachineID" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_setting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Parameter1" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Parameter2" Type="varchar" MaxLength="45" />
+    <Property Name="Parameter3" Type="varchar" MaxLength="45" />
+    <Property Name="Parameter4" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="mi_taudit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="senton" Type="datetime" Precision="0" />
+    <Property Name="sentto" Type="varchar" MaxLength="45" />
+    <Property Name="filename" Type="varchar" MaxLength="45" />
+    <Property Name="status" Type="varchar" MaxLength="45" />
+    <Property Name="maxresultid" Type="uint" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_tbooking">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LabID" Type="varchar" MaxLength="20" />
+    <Property Name="PatientID" Type="uint" />
+    <Property Name="Patient_name" Type="varchar" MaxLength="150" />
+    <Property Name="Test_Code" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Machine_TestID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Test_Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="InstrumentID" Type="uint" Nullable="false" />
+    <Property Name="Machine_Time" Type="datetime" Precision="0" />
+    <Property Name="SeqID" Type="varchar" MaxLength="50" />
+    <Property Name="BatchNo" Type="varchar" MaxLength="50" />
+    <Property Name="Sample_Type" Type="varchar" MaxLength="50" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ClientID" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="SendOn" Type="datetime" Precision="0" />
+    <Property Name="ReceivedOn" Type="datetime" Precision="0" />
+  </EntityType>
+  <EntityType Name="mi_tinstruments">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplierid" Type="uint" Nullable="false" />
+    <Property Name="Instrument_Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Model" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="I_Release" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="1000" />
+    <Property Name="Manual" Type="varchar" MaxLength="150" />
+    <Property Name="Patient_no_format" Type="varchar" MaxLength="50" />
+    <Property Name="BarCode_Standard" Type="varchar" MaxLength="100" />
+    <Property Name="Bidirectional" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Communication_Stnadard" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Communication_method" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="PORT" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="BaudRate" Type="uint" Nullable="false" />
+    <Property Name="Parity" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Stopbit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="DataBit" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FlowControl" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="Acknowledgement_code" Type="uint" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ClientID" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_tpersonnel">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="uint" Nullable="false" />
+    <Property Name="OrgId" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="DepartmentId" Type="uint" Nullable="false" />
+    <Property Name="SubdepartmentId" Type="uint" Nullable="false" />
+    <Property Name="DesignationId" Type="uint" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="ServiceNo" Type="varchar" MaxLength="20" />
+    <Property Name="Salutation" Type="varchar" MaxLength="6" Nullable="false" />
+    <Property Name="FName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="MName" Type="varchar" MaxLength="30" />
+    <Property Name="LName" Type="varchar" MaxLength="30" />
+    <Property Name="Acronym" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="FHName" Type="varchar" MaxLength="30" />
+    <Property Name="Sex" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DOB" Type="datetime" Precision="0" />
+    <Property Name="BloodGroup" Type="varchar" MaxLength="3" />
+    <Property Name="MS" Type="char" MaxLength="1" />
+    <Property Name="NIC" Type="varchar" MaxLength="15" />
+    <Property Name="NICValidUpto" Type="datetime" Precision="0" />
+    <Property Name="Passport" Type="varchar" MaxLength="20" />
+    <Property Name="PassportValidUpto" Type="datetime" Precision="0" />
+    <Property Name="HPhoneNo1" Type="varchar" MaxLength="15" />
+    <Property Name="HPhoneNo2" Type="varchar" MaxLength="15" />
+    <Property Name="OPhoneNo1" Type="varchar" MaxLength="15" />
+    <Property Name="OPhoneNo2" Type="varchar" MaxLength="15" />
+    <Property Name="CPhoneNo" Type="varchar" MaxLength="15" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="CurrentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="PermanentAddress" Type="varchar" MaxLength="250" />
+    <Property Name="PictureRef" Type="varchar" MaxLength="255" />
+    <Property Name="LoginId" Type="varchar" MaxLength="15" />
+    <Property Name="Pasword" Type="varchar" MaxLength="15" />
+    <Property Name="JoiningDate" Type="datetime" Precision="0" />
+    <Property Name="LeavingDate" Type="datetime" Precision="0" />
+    <Property Name="Education" Type="varchar" MaxLength="255" />
+    <Property Name="Nature" Type="char" MaxLength="1" />
+    <Property Name="ContractExpiry" Type="datetime" Precision="0" />
+    <Property Name="ReferenceCode" Type="varchar" MaxLength="15" />
+    <Property Name="Salary" Type="uint" />
+    <Property Name="FaxNo" Type="varchar" MaxLength="15" />
+    <Property Name="Enteredby" Type="uint" Nullable="false" />
+    <Property Name="Enteredon" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="clientid" Type="char" MaxLength="3" Nullable="false" />
+    <Property Name="crossdept" Type="char" MaxLength="1" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_tpreferencesetting">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="serveraddress" Type="varchar" MaxLength="45" />
+    <Property Name="archivalfolderpath" Type="varchar" MaxLength="45" />
+    <Property Name="serverfolderpath" Type="varchar" MaxLength="45" />
+    <Property Name="serveruser" Type="varchar" MaxLength="45" />
+    <Property Name="serverpassword" Type="varchar" MaxLength="45" />
+    <Property Name="transfer_method" Type="varchar" MaxLength="45" />
+    <Property Name="status" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="mi_tresult">
+    <Key>
+      <PropertyRef Name="ResultID" />
+    </Key>
+    <Property Name="ResultID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookingID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="AttributeID" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Result" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" />
+    <Property Name="ClientID" Type="char" MaxLength="4" />
+    <Property Name="Status" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="machinename" Type="varchar" MaxLength="45" />
+    <Property Name="senton" Type="datetime" Precision="0" />
+    <Property Name="sentto" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="mi_tsuppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Supplier_Name" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="500" />
+    <Property Name="Phone_1" Type="varchar" MaxLength="20" />
+    <Property Name="Phone_2" Type="varchar" MaxLength="20" />
+    <Property Name="Fax_1" Type="varchar" MaxLength="20" />
+    <Property Name="Fax_2" Type="varchar" MaxLength="20" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="CellNo" Type="varchar" MaxLength="20" />
+    <Property Name="WebAddress" Type="varchar" MaxLength="50" />
+    <Property Name="Linkedin_ID" Type="varchar" MaxLength="50" />
+    <Property Name="CP_Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="CP_Designation" Type="varchar" MaxLength="50" />
+    <Property Name="CP_Office_Phone" Type="varchar" MaxLength="20" />
+    <Property Name="CP_Cell_no" Type="varchar" MaxLength="20" />
+    <Property Name="CP_Email" Type="varchar" MaxLength="50" />
+    <Property Name="City" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="45" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="Clientid" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="Ref_SupplierID" Type="uint" />
+  </EntityType>
+  <EntityType Name="mi_ttestattribute">
+    <Key>
+      <PropertyRef Name="AttributeID" />
+    </Key>
+    <Property Name="AttributeID" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Machine_testid" Type="uint" Nullable="false" />
+    <Property Name="LIMSAttributeID" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="LIMSAttributeName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="MachineAttributeName" Type="varchar" MaxLength="150" Nullable="false" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ClientId" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="MachineAttributeCode" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_ttests">
+    <Key>
+      <PropertyRef Name="Machine_testid" />
+    </Key>
+    <Property Name="Machine_testid" Type="uint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Lims_testid" Type="char" MaxLength="6" Nullable="false" />
+    <Property Name="Lims_test_name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Machine_Test_name" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="LOINC_code" Type="varchar" MaxLength="45" />
+    <Property Name="Instrumentid" Type="uint" Nullable="false" />
+    <Property Name="EnteredBy" Type="uint" Nullable="false" />
+    <Property Name="EnteredOn" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="ClientID" Type="char" MaxLength="4" Nullable="false" />
+    <Property Name="Active" Type="char" MaxLength="1" Nullable="false" />
+    <Property Name="DeptID" Type="char" MaxLength="3" />
+    <Property Name="MachineTestCode" Type="varchar" MaxLength="20" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_cliqmachinemappings_MachineId">
+    <End Role="mi_tinstruments" Type="Self.mi_tinstruments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="cliqmachinemappings" Type="Self.cliqmachinemappings" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mi_tinstruments">
+        <PropertyRef Name="InstrumentID" />
+      </Principal>
+      <Dependent Role="cliqmachinemappings">
+        <PropertyRef Name="MachineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_mi_taudit_1">
+    <End Role="mi_tresult" Type="Self.mi_tresult" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="mi_taudit" Type="Self.mi_taudit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mi_tresult">
+        <PropertyRef Name="ResultID" />
+      </Principal>
+      <Dependent Role="mi_taudit">
+        <PropertyRef Name="maxresultid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="miModelStoreContainer">
+    <EntitySet Name="cliqmachinemappings" EntityType="Self.cliqmachinemappings" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_setting" EntityType="Self.mi_setting" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_taudit" EntityType="Self.mi_taudit" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tbooking" EntityType="Self.mi_tbooking" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tinstruments" EntityType="Self.mi_tinstruments" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tpersonnel" EntityType="Self.mi_tpersonnel" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tpreferencesetting" EntityType="Self.mi_tpreferencesetting" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tresult" EntityType="Self.mi_tresult" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_tsuppliers" EntityType="Self.mi_tsuppliers" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_ttestattribute" EntityType="Self.mi_ttestattribute" Schema="mi" store:Type="Tables" />
+    <EntitySet Name="mi_ttests" EntityType="Self.mi_ttests" Schema="mi" store:Type="Tables" />
+    <AssociationSet Name="FK_cliqmachinemappings_MachineId" Association="Self.FK_cliqmachinemappings_MachineId">
+      <End Role="mi_tinstruments" EntitySet="mi_tinstruments" />
+      <End Role="cliqmachinemappings" EntitySet="cliqmachinemappings" />
+    </AssociationSet>
+    <AssociationSet Name="FK_mi_taudit_1" Association="Self.FK_mi_taudit_1">
+      <End Role="mi_tresult" EntitySet="mi_tresult" />
+      <End Role="mi_taudit" EntitySet="mi_taudit" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

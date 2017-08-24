@@ -1,0 +1,8 @@
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\DataModel.dll.config
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\DataModel.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\DataModel.pdb
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\EntityFramework.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\MySql.Data.Entity.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Release\EntityFramework.xml
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\obj\Release\DataModel.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\obj\Release\DataModel.pdb

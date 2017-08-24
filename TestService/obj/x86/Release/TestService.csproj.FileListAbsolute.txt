@@ -15,3 +15,16 @@ D:\Muhammad Qamar\Interfacing_me\TestService\TestService\obj\x86\Release\TestSer
 D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\bin\Release\TestService.exe.config
 D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\obj\x86\Release\TestService.exe
 D:\Muhammad Qamar\interfacing_me_new\interfacing\TestService\TestService\obj\x86\Release\TestService.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\TestService.exe.config
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.exe
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\TestService.exe
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\TestService.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\BusinessLayer.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\DataLayer.dll
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\BusinessLayer.pdb
+E:\Projects\Trees\interfacing-master\TestService\bin\Release\DataLayer.pdb
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.ProjectInstaller.resources
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.Service1.resources
+E:\Projects\Trees\interfacing-master\TestService\obj\x86\Release\TestService.csproj.GenerateResource.Cache

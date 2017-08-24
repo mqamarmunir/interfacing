@@ -11,11 +11,13 @@ using System.Configuration;
 using MySql.Data.MySqlClient;
 using BusinessLayer;
 using System.Data.OleDb;
+using DataModel;
 
 namespace TestService
 {
     public partial class Service1 : ServiceBase
     {
+        private readonly UnitOfWork _unitOfWork;
         delegate void _remoteinserter(DataTable dt);
         private StringBuilder sb_port1 = new StringBuilder();
         private StringBuilder sb_port2 = new StringBuilder();
@@ -27,6 +29,7 @@ namespace TestService
         public Service1()
         {
             InitializeComponent();
+            _unitOfWork = new UnitOfWork();
             //eventLog1.LogDisplayName = "TestService";
             if (!System.Diagnostics.EventLog.SourceExists("WindowCopyServiceSource"))
             {
@@ -73,7 +76,7 @@ namespace TestService
                         ///then parse the record and Clear the string Builder for next 
                         ///Record.
                         // eventLog1.WriteEntry(sb.ToString());
-                       // eventLog1.WriteEntry(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim());
+                        // eventLog1.WriteEntry(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim());
                         Parsethisandinsert(sb_port1.ToString(), Convert.ToInt32(System.Configuration.ConfigurationSettings.AppSettings["parsingalgorithm_port1"].ToString().Trim()));
                         sb_port1.Clear();
 
@@ -94,11 +97,7 @@ namespace TestService
 
         private void Parsethisandinsert(string data, int Parsingalgorithm)
         {
-            string datetime = "";
-            string labid = "";
-            string attribresult = "";
-            string attribcode = "";
-            string patid = "";
+
             switch (Parsingalgorithm)
             {
 
@@ -106,7 +105,15 @@ namespace TestService
                 ///According to ASTM standard 
                 ///tested on 
                 ///sysmex xs800i,cobase411,cobasu411(urine analyzer)
+                ///
+
                 case 1:
+                    string datetime = "";
+                    string labid = "";
+                    string attribresult = "";
+                    string attribcode = "";
+                    string patid = "";
+
                     string[] sep1 = { "L|1" };
 
                     char[] sep2 = { Convert.ToChar(13) };
@@ -174,7 +181,7 @@ namespace TestService
                                 }
                                 if (attribcode.ToLower() == "wbc" || attribcode.ToLower() == "plt")
                                 {
-                              
+
                                     try
                                     {
                                         attribresult = ((Convert.ToDecimal(attribresult)) * 1000).ToString();
@@ -232,11 +239,73 @@ namespace TestService
                         }
                     }
                     break;//case 1 ends here
+                case 2://AU480 Beckman
+                    var text = data;//System.IO.File.ReadAllText(@"E:\Sample.txt");
+                    var splitter1 = new char[1] { Convert.ToChar(3) };
+                    var splitter2 = new string[] { " " };
+                    var arrayafter1stseperator = text.Split(splitter1, StringSplitOptions.RemoveEmptyEntries);
+                    labid = "";
+                    List<mi_tresult> lstresult = new List<mi_tresult>();
+                    foreach (string str1 in arrayafter1stseperator)
+                    {
+                        try
+                        {
+                            if (str1.Contains("DB") || str1.Contains("DE") || string.IsNullOrEmpty(str1))//skip start and end strings
+                                continue;
+
+                            var arrayafter2ndseperator = str1.Substring(0, 40).Split(splitter2, StringSplitOptions.RemoveEmptyEntries);
+                            if (arrayafter2ndseperator.Length > 3)
+                            {
+                                labid = arrayafter2ndseperator[3];
+
+                                string testsandresults = str1.Substring(40);
+                                var splitter3 = new string[] { "r", "nr" };
+                                var arrayafter3rdseperator = testsandresults.Split(splitter3, StringSplitOptions.None);
+                                foreach (string testresultall in arrayafter3rdseperator)
+                                {
+                                    string testresultsingle = testresultall.Replace("E", "").Trim();
+                                    if (testresultsingle.Length > 1)
+                                    {
+                                        string machinetestcode = testresultsingle.Substring(0, 3).Trim();
+                                        string resultsingle = testresultsingle.Substring(3).Trim();
+
+                                        lstresult.Add(new mi_tresult
+                                        {
+                                            BookingID = labid,
+                                            AttributeID = machinetestcode,
+                                            ClientID = "007",
+                                            EnteredBy = 1,
+                                            EnteredOn = System.DateTime.Now,//.ToString("yyyy-MM-dd hh:mm:ss tt"),
+                                            machinename = "1",
+                                            Result = resultsingle
+
+                                        });
+                                    }
+                                }
+
+                            }
+                        }
+                        catch (Exception ee)
+                        {
+                            Console.WriteLine(str1);
+                        }
+                    }
+
+                    break;
                 #endregion
             }
 
         }
+        private void InsertBookingList(List<mi_tresult> lstresult)
+        {
+            lstresult.ForEach(x => x.Status = "0");
+            foreach (var result in lstresult)
+            {
+                _unitOfWork.ResultsRepository.Insert(result);
 
+            }
+            _unitOfWork.Save();
+        }
         private void InsertBooking(string pars)
         {
 
@@ -311,7 +380,7 @@ values('" + System.DateTime.Now.ToString("yy") + "-" + str[1].Replace("'", "''")
 
         private void Main(object sender, System.Timers.ElapsedEventArgs e)
         {
-             eventLog1.WriteEntry("TImer main method");
+            eventLog1.WriteEntry("TImer main method");
             // WindowsImpersonationContext impersonationContext = null;
             //// Program g = new Program();
             //getservercredetials();
@@ -434,16 +503,6 @@ values('" + System.DateTime.Now.ToString("yy") + "-" + str[1].Replace("'", "''")
                         DataView dv = null;
                         try
                         {
-                            try
-                            {
-                                //Conn.Open();
-                                //eventLog1.WriteEntry("Remote DB login Successful ");
-                            }
-                            catch (Exception ee)
-                            {
-                                //eventLog1.WriteEntry("Remote DB login failed: " + ee.Message);
-                                return;
-                            }
                             DataSet DS = null;
                             try
                             {
@@ -488,7 +547,7 @@ values('" + System.DateTime.Now.ToString("yy") + "-" + str[1].Replace("'", "''")
                             {
                                 try
                                 {
-                                  //  Conn.Open();
+                                    //  Conn.Open();
                                 }
                                 catch (Exception ee)
                                 {
@@ -593,8 +652,8 @@ values('" + System.DateTime.Now.ToString("yy") + "-" + str[1].Replace("'", "''")
                                 }
                                 finally
                                 {
-                                  //  Conn.Close();
-                                   // Conn.Dispose();
+                                    //  Conn.Close();
+                                    // Conn.Dispose();
 
                                 }
                                 if (insertcheck > 0)
@@ -682,9 +741,9 @@ values('" + System.DateTime.Now.ToString("yy") + "-" + str[1].Replace("'", "''")
             }
             else
             {
-                eventLog1.WriteEntry("Error while deleting old data: " +_main.Error);
+                eventLog1.WriteEntry("Error while deleting old data: " + _main.Error);
             }
         }
-        
+
     }
 }

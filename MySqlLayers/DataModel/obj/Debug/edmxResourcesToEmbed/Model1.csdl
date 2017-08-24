@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="miModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="mi_setting">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Parameter1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Parameter2" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Parameter3" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Parameter4" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mi_taudit">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="senton" Type="DateTime" />
+    <Property Name="sentto" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="filename" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="maxresultid" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="mi_tresult" Relationship="Self.FK_mi_taudit_1" FromRole="mi_taudit" ToRole="mi_tresult" />
+  </EntityType>
+  <EntityType Name="mi_tbooking">
+    <Key>
+      <PropertyRef Name="BookingID" />
+    </Key>
+    <Property Name="BookingID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="LabID" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PatientID" Type="Int64" />
+    <Property Name="Patient_name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Test_Code" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Machine_TestID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Test_Name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="InstrumentID" Type="Int64" Nullable="false" />
+    <Property Name="Machine_Time" Type="DateTime" />
+    <Property Name="SeqID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BatchNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Sample_Type" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" Nullable="false" />
+    <Property Name="ClientID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="SendOn" Type="DateTime" />
+    <Property Name="ReceivedOn" Type="DateTime" />
+  </EntityType>
+  <EntityType Name="mi_tinstruments">
+    <Key>
+      <PropertyRef Name="InstrumentID" />
+    </Key>
+    <Property Name="InstrumentID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplierid" Type="Int64" Nullable="false" />
+    <Property Name="Instrument_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Model" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="I_Release" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Description" Type="String" MaxLength="1000" FixedLength="false" Unicode="false" />
+    <Property Name="Manual" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+    <Property Name="Patient_no_format" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BarCode_Standard" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Bidirectional" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Communication_Stnadard" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Communication_method" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="PORT" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="BaudRate" Type="Int64" Nullable="false" />
+    <Property Name="Parity" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Stopbit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DataBit" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FlowControl" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Acknowledgement_code" Type="Int64" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" Nullable="false" />
+    <Property Name="ClientID" Type="String" MaxLength="45" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="cliqmachinemappings" Relationship="miModel.FK_cliqmachinemappings_MachineId" FromRole="mi_tinstruments" ToRole="cliqmachinemapping" />
+  </EntityType>
+  <EntityType Name="mi_tpersonnel">
+    <Key>
+      <PropertyRef Name="PersonId" />
+    </Key>
+    <Property Name="PersonId" Type="Int64" Nullable="false" />
+    <Property Name="OrgId" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DepartmentId" Type="Int64" Nullable="false" />
+    <Property Name="SubdepartmentId" Type="Int64" Nullable="false" />
+    <Property Name="DesignationId" Type="Int64" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="ServiceNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Salutation" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="LName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Acronym" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="FHName" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Sex" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DOB" Type="DateTime" />
+    <Property Name="BloodGroup" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MS" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="NIC" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="NICValidUpto" Type="DateTime" />
+    <Property Name="Passport" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="PassportValidUpto" Type="DateTime" />
+    <Property Name="HPhoneNo1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="HPhoneNo2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OPhoneNo1" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="OPhoneNo2" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="CPhoneNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CurrentAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PermanentAddress" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+    <Property Name="PictureRef" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="LoginId" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Pasword" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="JoiningDate" Type="DateTime" />
+    <Property Name="LeavingDate" Type="DateTime" />
+    <Property Name="Education" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+    <Property Name="Nature" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+    <Property Name="ContractExpiry" Type="DateTime" />
+    <Property Name="ReferenceCode" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Salary" Type="Int64" />
+    <Property Name="FaxNo" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Enteredby" Type="Int64" Nullable="false" />
+    <Property Name="Enteredon" Type="DateTime" Nullable="false" />
+    <Property Name="clientid" Type="String" MaxLength="3" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="crossdept" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_tpreferencesetting">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="serveraddress" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="archivalfolderpath" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="serverfolderpath" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="serveruser" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="serverpassword" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="transfer_method" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="mi_tresult">
+    <Key>
+      <PropertyRef Name="ResultID" />
+    </Key>
+    <Property Name="ResultID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookingID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="AttributeID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Result" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" />
+    <Property Name="ClientID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" />
+    <Property Name="Status" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="machinename" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="senton" Type="DateTime" />
+    <Property Name="sentto" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="mi_taudit" Relationship="Self.FK_mi_taudit_1" FromRole="mi_tresult" ToRole="mi_taudit" />
+  </EntityType>
+  <EntityType Name="mi_tsuppliers">
+    <Key>
+      <PropertyRef Name="SupplierID" />
+    </Key>
+    <Property Name="SupplierID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Supplier_Name" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Phone_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fax_1" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Fax_2" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CellNo" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="WebAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Linkedin_ID" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CP_Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="CP_Designation" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="CP_Office_Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CP_Cell_no" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="CP_Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Country" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" Nullable="false" />
+    <Property Name="Clientid" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Ref_SupplierID" Type="Int64" />
+  </EntityType>
+  <EntityType Name="mi_ttestattribute">
+    <Key>
+      <PropertyRef Name="AttributeID" />
+    </Key>
+    <Property Name="AttributeID" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Machine_testid" Type="Int64" Nullable="false" />
+    <Property Name="LIMSAttributeID" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LIMSAttributeName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MachineAttributeName" Type="String" MaxLength="150" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" Nullable="false" />
+    <Property Name="ClientId" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="MachineAttributeCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="mi_ttests">
+    <Key>
+      <PropertyRef Name="Machine_testid" />
+    </Key>
+    <Property Name="Machine_testid" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Lims_testid" Type="String" MaxLength="6" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Lims_test_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Machine_Test_name" Type="String" MaxLength="200" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="LOINC_code" Type="String" MaxLength="45" FixedLength="false" Unicode="false" />
+    <Property Name="Instrumentid" Type="Int64" Nullable="false" />
+    <Property Name="EnteredBy" Type="Int64" Nullable="false" />
+    <Property Name="EnteredOn" Type="DateTime" Nullable="false" />
+    <Property Name="ClientID" Type="String" MaxLength="4" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Active" Type="String" MaxLength="1" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DeptID" Type="String" MaxLength="3" FixedLength="false" Unicode="false" />
+    <Property Name="MachineTestCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <Association Name="FK_mi_taudit_1">
+    <End Role="mi_tresult" Type="Self.mi_tresult" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="mi_taudit" Type="Self.mi_taudit" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mi_tresult">
+        <PropertyRef Name="ResultID" />
+      </Principal>
+      <Dependent Role="mi_taudit">
+        <PropertyRef Name="maxresultid" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="miEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="mi_setting" EntityType="Self.mi_setting" />
+    <EntitySet Name="mi_taudit" EntityType="Self.mi_taudit" />
+    <EntitySet Name="mi_tbooking" EntityType="Self.mi_tbooking" />
+    <EntitySet Name="mi_tinstruments" EntityType="Self.mi_tinstruments" />
+    <EntitySet Name="mi_tpersonnel" EntityType="Self.mi_tpersonnel" />
+    <EntitySet Name="mi_tpreferencesetting" EntityType="Self.mi_tpreferencesetting" />
+    <EntitySet Name="mi_tresult" EntityType="Self.mi_tresult" />
+    <EntitySet Name="mi_tsuppliers" EntityType="Self.mi_tsuppliers" />
+    <EntitySet Name="mi_ttestattribute" EntityType="Self.mi_ttestattribute" />
+    <EntitySet Name="mi_ttests" EntityType="Self.mi_ttests" />
+    <AssociationSet Name="FK_mi_taudit_1" Association="Self.FK_mi_taudit_1">
+      <End Role="mi_tresult" EntitySet="mi_tresult" />
+      <End Role="mi_taudit" EntitySet="mi_taudit" />
+    </AssociationSet>
+    <EntitySet Name="cliqmachinemappings" EntityType="miModel.cliqmachinemapping" />
+    <AssociationSet Name="FK_cliqmachinemappings_MachineId" Association="miModel.FK_cliqmachinemappings_MachineId">
+      <End Role="mi_tinstruments" EntitySet="mi_tinstruments" />
+      <End Role="cliqmachinemapping" EntitySet="cliqmachinemappings" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="cliqmachinemapping">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BranchID" Type="Int64" Nullable="false" />
+    <Property Name="Test_ID" Type="Int64" Nullable="false" />
+    <Property Name="TestName" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="CliqAttributeID" Type="Int64" Nullable="false" />
+    <Property Name="AttributeName" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="MachineAttributeCode" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="Active" Type="Boolean" Nullable="false" />
+    <Property Name="MachineID" Type="Int64" Nullable="false" />
+    <NavigationProperty Name="mi_tinstruments" Relationship="miModel.FK_cliqmachinemappings_MachineId" FromRole="cliqmachinemapping" ToRole="mi_tinstruments" />
+  </EntityType>
+  <Association Name="FK_cliqmachinemappings_MachineId">
+    <End Type="miModel.mi_tinstruments" Role="mi_tinstruments" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="miModel.cliqmachinemapping" Role="cliqmachinemapping" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="mi_tinstruments">
+        <PropertyRef Name="InstrumentID" />
+      </Principal>
+      <Dependent Role="cliqmachinemapping">
+        <PropertyRef Name="MachineID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

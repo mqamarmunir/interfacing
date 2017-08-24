@@ -1,0 +1,17 @@
+E:\Projects\Trees\MDI Tab Browsing\DataModel\bin\Debug\DataModel.dll.config
+E:\Projects\Trees\MDI Tab Browsing\DataModel\bin\Debug\DataModel.dll
+E:\Projects\Trees\MDI Tab Browsing\DataModel\bin\Debug\DataModel.pdb
+E:\Projects\Trees\MDI Tab Browsing\DataModel\bin\Debug\EntityFramework.dll
+E:\Projects\Trees\MDI Tab Browsing\DataModel\bin\Debug\EntityFramework.xml
+E:\Projects\Trees\MDI Tab Browsing\DataModel\obj\Debug\DataModel.dll
+E:\Projects\Trees\MDI Tab Browsing\DataModel\obj\Debug\DataModel.pdb
+E:\Projects\Trees\MDI Tab Browsing\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\DataModel.dll.config
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\DataModel.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\DataModel.pdb
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\EntityFramework.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\MySql.Data.Entity.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\bin\Debug\EntityFramework.xml
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\obj\Debug\DataModel.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\obj\Debug\DataModel.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\DataModel\obj\Debug\DataModel.pdb

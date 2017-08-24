@@ -5,3 +5,9 @@ D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\BusinessLayer\obj\Relea
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\BusinessLayer\obj\Release\BusinessLayer.dll
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\BusinessLayer\obj\Release\BusinessLayer.pdb
 D:\Muhammad Qamar\Interfacing_me\TestService\MySqlLayers\BusinessLayer\bin\Release\MySql.Data.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\bin\Release\BusinessLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\bin\Release\BusinessLayer.pdb
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\bin\Release\DataLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\obj\Release\BusinessLayer.csprojResolveAssemblyReference.cache
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\obj\Release\BusinessLayer.dll
+E:\Projects\Trees\interfacing-master\MySqlLayers\BusinessLayer\obj\Release\BusinessLayer.pdb
